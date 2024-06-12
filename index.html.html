@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Project</title>
+        <style>
+            body{background-color: aquamarine;
+                
+            
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+     <h1><center>Pizza Codes</center></h1><br>
+     <h2><center>Noken Kwap</center></h2>
+     
+       <h3> private void button1ActionPerformed(java.awt.event.ActionEvent evt) <h3><br> {  <br>                                       
+           <p>  <br>String size; <br>
+            int quan; <br>
+            int s=15,m=30,l=60; <br>
+            size=ch_1.getSelectedItem(); <br>
+            quan=Integer.parseInt(ta1.getText()); <br>
+            ta_1.setText("Size: "+ size+"\n"); <br>
+            ta_1.setText(ta_1.getText() +"Quantity : "+ quan+"\n"); <br>
+            
+            <br><hr>
+            //chk box <br>
+            int sum; <br>
+            if(ck_1.getState()==true &&ck_2.getState()==true &&ck_3.getState()==true&& ck_4.getState()==true)
+            {
+                <br>
+            ta_1.setText(ta_1.getText()+"Get all Toppings ");
+            sum=10;
+            }
+            <br>
+            else if(ck_1.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+"Add Onion");
+            sum=2;
+            
+            }
+            <br>
+             else if(ck_2.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+"Add Cheese");
+            sum=3;
+            
+            } <br>
+
+             else if(ck_3.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+"Add Mushroom");
+            sum=1;
+            }
+            <br>
+             else if(ck_4.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+"Add Chicken");
+            sum=4;
+            }
+            <br>
+              else
+             {
+             ta_1.setText(ta_1.getText()+"No Toppings added");
+             sum=0;
+             }
+            
+             <br> <br>
+            //nextLine onion
+             if (ck_1.getState()==true&&ck_2.getState()!=false&&ck_3.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+" ,Cheese  ");
+            sum=(2+3+1);
+            } <br>
+
+             else if(ck_1.getState()!=false&&ck_2.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+" and Cheese");
+            sum=(2+3);
+            } <br>
+             else if(ck_1.getState()!=false &&ck_3.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+" and Mushroom");
+            sum=(2+1);
+            } <br>
+             else if(ck_4.getState()!=false&&ck_1.getState()!=false)
+            {
+            ta_1.setText(ta_1.getText()+" and Chicken");
+            sum=(5+2);
+            } <br>
+            else
+             {ta_1.setText(ta_1.getText()+" ");
+             } <br>
+             
+             //new cheese
+             
+              if(ck_2.getState()!=false&&ck_3.getState()!=false&&ck_4.getState()!=false)
+              {
+                 ta_1.setText(ta_1.getText()+" ,Mushroom ");
+                 sum=(3+1+4);
+              } <br>
+               else if(ck_2.getState()!=false&&ck_3.getState()!=false)
+                   sum=(3+1);
+               {
+                ta_1.setText(ta_1.getText()+" and Mushroom");
+               } <br>
+               //else if
+               if(ck_2.getState()!=false&&ck_4.getState()!=false)
+              {
+               ta_1.setText(ta_1.getText()+" and Chicken");
+               sum=(2+4);
+              } <br>
+              
+              //Mashroom
+              if(ck_3.getState()!=false&&ck_4.getState()!=false)
+              {
+                ta_1.setText(ta_1.getText()+" and Chicken");
+                sum=(1+4);
+              }  <br>
+              else
+                {ta_1.setText(ta_1.getText()+" ");}
+              
+                <br> //choice <br> <br>
+             switch (ch_1.getSelectedItem()) {
+                 case "Small": <br>
+                     ta_1.setText(ta_1.getText()+"\nCost: K"+(quan*s+sum));
+                     break; <br>
+                 case "Medium":
+                     ta_1.setText(ta_1.getText()+"\nCost: K"+(quan*m+sum));
+                     break; <br>
+                 case "Large":
+                     ta_1.setText(ta_1.getText()+"\nCost: K"+(quan*l+sum));
+                     break; <br>
+                 default:
+                     ta_1.setText(ta_1.getText()+"\nChoose a size:"); <br> <br>
+                     break;
+             }
+            //chkbox
+         
+         }                                       
+     </p>
+
+    </body>
+</html>
